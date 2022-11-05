@@ -3,10 +3,10 @@ Particle[] boop = new Particle[700];
 void setup(){
   size(500, 500);
   background(0,15);
-  for(int i = 0; i < 10; i++){
+  for(int i = 0; i < 50; i++){
     boop[i] = new Oddball();
   }
-  for(int i = 10; i < boop.length; i++){
+  for(int i = 50; i < boop.length; i++){
     boop[i] = new Particle();
   }
 }
@@ -22,12 +22,12 @@ void draw(){
 
 void mousePressed(){
   background(0);
-  for(int i = 0; i < 10; i++){
+  for(int i = 0; i < 50; i++){
     boop[i] = new Oddball();
     boop[i].move();
     boop[i].show();
   }
-  for(int i = 10; i < boop.length; i++){
+  for(int i = 50; i < boop.length; i++){
     boop[i] = new Particle();
     boop[i].move();
     boop[i].show();
