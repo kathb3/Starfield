@@ -2,7 +2,7 @@ Particle[] boop = new Particle[700];
 
 void setup(){
   size(500, 500);
-  background(0);
+  background(0,15);
   for(int i = 0; i < 10; i++){
     boop[i] = new Oddball();
   }
@@ -42,7 +42,7 @@ class Particle{
     myX = mouseX;
     myY = mouseY;
     myAngle = Math.random()*(Math.random()*-1)*Math.PI;
-    mySpeed = (Math.random()*5) + 2;
+    mySpeed = (Math.random()*3) + 2;
     myColor = color((int)(Math.random() * 255), (int)(Math.random() * 255), 0, 90); 
     mySize = (float)(Math.random() + 3);
 }
@@ -64,8 +64,8 @@ class Oddball extends Particle
     myColor = color(255, 189, 13, 90);
     mySize = 10;
     myX = myY = 250;
-    myAngle = Math.random() * 2 * Math.PI;
-    mySpeed = Math.random() * 5 + 1;
+    myAngle = Math.random()*1* Math.PI;
+    mySpeed = Math.random()*5 + 1;
   }
   void move(){
     myX += Math.cos(myAngle) * mySpeed;
